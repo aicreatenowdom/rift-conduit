@@ -1,0 +1,240 @@
+﻿RIFTCONDUIT 2.0
+PRIVACY POLICY AND INSTALLATION INFORMATION
+AI Creations Now Software Development
+Effective date: October 6, 2026
+Website: https://aicreatenow.com/
+
+WHAT RIFTCONDUIT DOES
+RiftConduit is a Windows application for administering an SFTP connection to
+your computer. It installs to the 64-bit Program Files\RiftConduit directory,
+creates a Desktop shortcut and Start menu entries, and registers an uninstaller
+in Windows Settings. Administrative permission is required to operate it.
+
+INSTALLATION AND REQUIRED WINDOWS COMPONENTS
+The same installer supports the normal visual wizard and unattended installation
+with the documented silent switches. Both modes install the complete RiftConduit
+application and local help files and prepare missing Microsoft inbox OpenSSH
+from matching x64 Features on Demand CABs included in the installer. Setup uses
+that local source without a component download or Windows Update/WSUS fallback.
+It does not start an SFTP listener, create a Windows account, start the trial,
+or contact the licensing server. If a previous edition is installed in another
+folder, Setup asks you to uninstall it first through Windows Settings. That
+uninstall stops its listener and retains its connection data and accounts.
+Silent setup does not open the application or a browser. Windows may request
+administrator consent.
+
+Microsoft .NET Framework 4.7.2 or newer must already be installed. Setup checks
+this prerequisite and stops if it is missing; it does not download a runtime.
+
+OpenSSH preparation uses Windows servicing during setup. The packaged source
+must match the Windows release and architecture; absent, damaged or mismatched
+payloads stop preparation. Existing OpenSSH is reused. Microsoft component
+signatures are retained; the publisher does not re-sign these Windows files.
+
+If Windows servicing requires a restart, setup reports it and saves recovery
+information without forcing a restart. Restart Windows yourself, then rerun
+the installer to finish. During feature installation, preexisting OpenSSH
+services and firewall rules are preserved. If Windows adds a default sshd
+service or firewall rules, RiftConduit stops/disables only the newly added
+default service and removes only rules its installation journal proves were
+newly added. It does not open the application's SFTP access during setup.
+
+When you explicitly choose Turn On, RiftConduit verifies the prerequisites
+and configures/starts its own listener and rules. Turn On does not run DISM,
+install Windows components or download them. If OpenSSH is later removed or
+damaged, repair the signed installation before using Turn On.
+
+TRIAL, LICENSE ACTIVATION AND PURCHASE
+The first application launch offers an explicit two-day trial or immediate
+license activation. The trial is 48 elapsed hours from the successful Start
+Trial action; installation alone does not start it. The displayed paid offer
+is $7.99 for a lifetime license, lifetime technical support and lifetime upgrades.
+Choosing the purchase link opens this Stripe checkout in your default browser:
+  https://buy.stripe.com/6oU7sN0JB5l66c40Fw5kk0d
+Stripe handles payment under its own terms and privacy policy. RiftConduit does
+not collect or store payment-card information. A purchase does not itself save
+registration: the customer must enter the supplied key and activate it.
+
+Only an explicit activation sends a licensing request to:
+  https://licensing.aicreatenow.com/api/v1/activate.asp
+The HTTPS form includes the entered ten-digit key, a product-scoped SHA-256
+computer identifier derived from SMBIOS UUID or Windows MachineGuid, an
+installation identifier, the Windows computer name and client version. The
+licensing server also receives the network source address as part of the HTTPS
+connection. These details are used to validate the key, administer its computer
+binding and approve activation. The client does not download the server's
+license database. No SFTP account password or drive contents are included.
+
+Successful activation saves a machine-protected registration record beneath:
+  C:\Program Files\RiftConduit\LicenseState\registration.dat
+The standard x64 Program Files folder is used if Windows is on another drive.
+The record holds a hash of the license key, computer/installation identifiers,
+activation timestamp and integrity proof; it does not retain the original
+license key. Windows machine-scope DPAPI and folder permissions protect it.
+Registered operation checks this local record without routine server calls,
+subscription checks or later server-revocation polling. Explicit reactivation
+requires a new request, for example after uninstall/reinstall or damaged state.
+
+The trial start and last-observed-clock/expiry history are stored in the 64-bit
+machine registry at:
+  HKLM\SOFTWARE\AI Creations Now Software Development\RiftConduit\Licensing
+Both records use machine-scope DPAPI and protected registry permissions. The
+original trial deadline and an observed expiry survive normal uninstall and
+reinstall so reinstalling does not grant another trial. Clock rollback beyond
+the supported tolerance can expire a trial. Registration is removed by uninstall;
+reinstallation requires entering the key and obtaining server approval again.
+Keep your license key securely. Local protection is not a guarantee against an
+administrator deliberately replacing software or protected machine state.
+
+Activation records on the licensing server support license validation and
+computer binding. This application does not send periodic usage reports or
+implement automatic server-record deletion. For questions about retained
+activation records or a data request, contact AI Creations Now Software
+Development at info@AICreateNow.com. No server retention period or automatic
+erasure schedule is represented by this client software.
+
+LOCAL LICENSE GUARD
+When Turn On is requested, RiftConduit configures its own local service named
+AICNRiftConduitLicenseGuard. It runs the same signed installed RiftConduit.exe
+with --license-service under LocalSystem. The owned SFTP service depends on it.
+The guard checks local license/trial state about every five seconds while it is
+running, including when the GUI is closed; it does not poll the licensing server.
+At trial expiry or failed local verification it stops the owned SFTP listener
+and sessions and removes this product's own firewall rules. It does not remove
+accounts or change unrelated listeners and firewall rules. A stopped or
+powered-off computer is checked again when the guard starts. Expired activation
+screens appear through the interactive app, not as a service-created desktop UI.
+The guard is removed when RiftConduit is successfully uninstalled.
+
+NETWORK ACCESS AND FIREWALL RULES
+Turn On configures RiftConduit's own SFTP-only OpenSSH service on TCP port 22.
+The service runs under the Windows LocalSystem account and uses per-user
+Windows authentication for file access; this service does not offer a shell.
+It adds its own allow rule for the IPv4 address you enter and, when checked, an
+allow rule for 100.64.0.0/10, the Tailscale IPv4 range. The Tailscale option is
+checked by default. RiftConduit does not install Tailscale, discover adapters,
+or configure an IPv6 allowance. Tailscale connectivity must already be set up
+separately if you intend to connect through Tailscale.
+
+These are additional Windows Firewall rules. Existing rules and administrative
+policies remain in force: another allow rule can admit other source addresses,
+and an existing block rule can prevent a connection. RiftConduit does not reset
+the firewall or restrict unrelated network traffic. The administrator remains
+responsible for the computer's overall access policy and any router forwarding.
+SFTP encrypts the file-transfer connection; connected users can access files
+according to their Windows account permissions. The starting folder is C:\.
+
+ACCOUNTS AND CREDENTIALS
+Account creation occurs only when you explicitly request it. The created local
+Windows account belongs to the Administrators group and RiftConduit's local
+access group. Administrator membership grants broad access to the computer.
+Windows manages account authentication and password storage. RiftConduit uses
+the existing account and group membership when you reopen the application;
+turning the connection on and off does not repeatedly create new accounts.
+
+When an account is created, RiftConduit writes the requested connection details,
+including that account's username and plaintext password, to a text file on the
+creating user's Desktop. File permissions restrict that file to the creating
+user and SYSTEM. Anyone who can read that file has the credentials. Store it
+securely or delete it when it is no longer needed. Desktop folder synchronization
+or backup software that you configure can copy this plaintext credential file
+to another location or service. RiftConduit does not copy the password into
+its saved IP settings or recovery journal. This credentials file stays brief:
+connection details, credentials, host-key fingerprint and essential reminders.
+
+A separate text file on the same Desktop contains general login steps and links
+to recommended SFTP file browsers and remote-drive applications. Its contents
+do not include the customer's password, selected IP address or connection details.
+Both Desktop files use private file permissions for the creating user and SYSTEM.
+Their filenames include the account name so the matching files are identifiable.
+
+LOCAL CONNECTION GUIDE
+The existing-account button and account-created hyperlink open the installed
+Help\Connect.html page in your default browser. This is a generic, local guide
+with bundled artwork, setup instructions, and two compact tables of client
+website links: file browsers and remote-drive applications. It contains
+no customer account name, password, selected IP address, or personalized URL.
+Opening it does not upload credentials or report usage to the publisher. The
+guide contains no telemetry, trackers, or externally loaded page assets.
+
+You can choose links to third-party client websites from that guide. Opening
+one of those links contacts that vendor's website, where its own privacy terms,
+downloads, pricing and account requirements apply. RiftConduit does not install
+these client programs. The source/installer package also includes a plain-text
+copy of the general guide, without customer credentials.
+
+LOCAL DATA AND LOGS
+Settings and operational records are stored locally under:
+  %ProgramData%\AICN-RiftConduit
+On a computer with retained data from the previous edition, RiftConduit reuses
+that existing protected folder, host keys, account group and service identity
+instead. Earlier internal identifiers may be retained solely to keep existing
+connection records usable. Host keys and accounts are not moved or recreated.
+If both the earlier and current data folders exist, the application reports a
+conflict and requires resolution before continuing; neither data set is merged
+or overwritten.
+
+The selected data folder can contain the IPv4 address, Tailscale checkbox setting,
+recovery state, OpenSSH configuration and host keys, installer/component logs,
+and SFTP service logs. Logs can include local paths, account names, addresses,
+errors, and connection information. Folder permissions restrict access to
+Administrators and SYSTEM. The folder is persistent application data, not a
+temporary installation folder. The installed application does not include
+advertising, analytics, or a product telemetry upload service.
+
+If OpenSSH installation requires a Windows restart, RiftConduit records recovery
+information in the protected openssh-restart.bin file in that ProgramData folder
+and uses a volatile boot-session registry marker under:
+  HKEY_LOCAL_MACHINE\SOFTWARE\AI Creations Now RiftConduit Boot Session
+An installation retaining earlier connection records also retains its matching
+boot-session marker location. The volatile marker ends with the Windows boot
+session. Together, these records require an actual restart before SFTP activation
+resumes and preserve which changes came from this Windows component installation. They do not create or
+modify another Windows account.
+
+OUTSIDE SERVICES
+RiftConduit's file connection is between your SFTP client and this computer.
+The installer's OpenSSH servicing is restricted to its local feature source.
+Windows signature/certificate validation can contact Microsoft or certificate
+infrastructure; Windows and separately managed updates have their own behavior. If you separately use Tailscale,
+RaiDrive, WinSCP, or another service/client, its own network behavior and privacy
+terms apply. RiftConduit does not send your drive contents or account password
+to AI Creations Now Software Development.
+
+EXIT, TURN OFF AND UNINSTALL
+Exit Application and the window's close button close the GUI. They leave an
+active SFTP listener and its connections running while the license or trial
+permits access. The local guard continues enforcing trial expiry after the GUI
+closes. Reopen the Desktop shortcut and choose Turn Off when you want to stop
+access yourself.
+
+Turn Off stops RiftConduit's owned SFTP listener/sessions and removes its own
+firewall rules. It retains installed Windows components, saved settings, host
+keys, and Windows accounts. The preexisting Windows sshd service and unrelated
+firewall rules are not removed or reconfigured by this action.
+
+Uninstall first performs RiftConduit's shutdown and owned-rule cleanup. If that
+cleanup fails, removal stops so the application remains available for recovery.
+After successful cleanup, Uninstall removes the license guard service, installed
+registration record, application files and shortcuts. Machine trial start and
+clock/expiry history remain to prevent a fresh trial after reinstallation.
+It retains the selected protected data folder, Windows accounts/groups,
+both Desktop text files, and Microsoft OpenSSH Server. The owned Windows service
+is also retained in the disabled state; it uses the retained Windows OpenSSH
+binaries and saved configuration. Fresh installations use AICNRiftConduitSFTP;
+an installation with earlier connection records retains its earlier identity.
+Retaining shared components avoids breaking another application that uses them.
+OpenSSH is a Windows capability and can be managed separately using Windows
+Optional Features or Windows servicing; it may not appear as a normal installed
+app.
+
+CODE SIGNING
+The publisher build process signs the application and generated uninstaller
+with the configured Microsoft Azure signing account. The final installer is
+signed by the publisher separately before distribution. Signing identifies the
+publisher and protects signed-file integrity. Windows reputation, SmartScreen,
+Smart App Control, and organizational policies make their own trust decisions;
+a digital signature cannot guarantee that every device will permit execution.
+
+Questions: use the contact information at https://aicreatenow.com/.
+Copyright (C) 2026 AI Creations Now Software Development. All rights reserved.

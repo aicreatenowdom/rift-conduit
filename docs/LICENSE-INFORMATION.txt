@@ -1,0 +1,21 @@
+RIFT CONDUIT 2.0 — TRIAL AND LICENSE INFORMATION
+AI Creations Now Software Development
+
+FREE TRIAL
+The free trial lasts 48 elapsed hours from successfully choosing Start Trial in the app. Installation alone does not start it. The deadline still applies when the app window is closed or Windows is powered off. At expiry, Rift Conduit stops its managed SFTP access. Normal reinstall does not reset the trial.
+
+LIFETIME LICENSE
+$7.99 one-time payment for a license bound to the activated computer. Includes lifetime technical support and lifetime upgrades. No recurring Rift Conduit subscription.
+Purchase: https://buy.stripe.com/6oU7sN0JB5l66c40Fw5kk0d
+
+ACTIVATION
+Enter your supplied ten-digit key in the application and activate it. Internet access and server approval are required for activation. Payment alone does not register the application. After successful activation, routine license checks are local. Keep your key for reactivation after uninstall/reinstall or recovery. Key fulfillment timing is not guaranteed by this document.
+
+REQUIREMENTS
+Windows x64 host, administrative permission and .NET Framework 4.7.2 or newer. A separate SFTP client and a reachable network connection are needed for file access. Third-party clients have their own terms and requirements.
+
+CONTACT
+info@AICreateNow.com
+https://aicreatenow.com/
+
+This is customer product information, not a replacement for the supplied software privacy policy or any applicable purchase terms.
