@@ -1,6 +1,10 @@
 # Rift Conduit version notes
 
-## 2.0 — Current documented distribution
+## 2.1.0 — Current Windows download
+
+The official product website now links to the signed Windows installer for version 2.1.0. Download it from the [official download page](https://riftconduit.com/download.html).
+
+## 2.0 — Original documented distribution
 
 This is the first Rift Conduit GitHub product listing. It documents the existing 2.0 distribution; creating this repository does not announce a new application build.
 
@@ -13,3 +17,4 @@ This is the first Rift Conduit GitHub product listing. It documents the existing
 [Official download and system requirements](https://riftconduit.com/download.html) · [Connection guide](https://riftconduit.com/connection-guide.html)
 
 **Download the installer using the official product links.** GitHub's automatically generated source archives contain this repository's documentation and artwork, not application source code or a Windows installer.
+

@@ -2,7 +2,7 @@
 
 Install Rift Conduit on the **Windows computer that holds your files**. Install your chosen SFTP client on the **computer you connect from**.
 
-[Official website](https://riftconduit.com/) · [Download for Windows](https://download.aicreatenow.com/software/rift-Conduit2.0.0microsoftSigned.exe) · [Full connection guide](https://riftconduit.com/connection-guide.html)
+[Official website](https://riftconduit.com/) · [Download for Windows](https://download.aicreatenow.com/software/rift-Conduit2.1.0microsoftSigned.exe) · [Full connection guide](https://riftconduit.com/connection-guide.html)
 
 ## 1. Install and start your trial or activate
 
@@ -71,3 +71,4 @@ Keep that key: uninstalling removes registration, so reinstalling requires activ
 [Trial and license information](https://riftconduit.com/docs/LICENSE-INFORMATION.txt) · [Privacy policy](https://riftconduit.com/privacy.html)
 
 Copyright © 2026 AI Creations Now Software Development. All rights reserved.
+

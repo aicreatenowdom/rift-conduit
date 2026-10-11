@@ -10,12 +10,13 @@
 
 <p align="center">
   <a href="https://riftconduit.com/">Official website</a> ·
-  <a href="https://download.aicreatenow.com/software/rift-Conduit2.0.0microsoftSigned.exe">Download for Windows</a> ·
+  <a href="https://download.aicreatenow.com/software/rift-Conduit2.1.0microsoftSigned.exe">Download for Windows</a> ·
   <a href="https://buy.stripe.com/6oU7sN0JB5l66c40Fw5kk0d">Buy lifetime license — $7.99</a> ·
-  <a href="https://riftconduit.com/connection-guide.html">Connection guide</a>
+  <a href="https://riftconduit.com/connection-guide.html">Connection guide</a> ·
+  <a href="https://apps.microsoft.com/detail/xp9mk158ckd0pm?hl=en-US&amp;gl=US">Microsoft Store</a>
 </p>
 
-<p align="center">Version 2.0 · Windows x64 · 48-hour free trial · No recurring Rift Conduit subscription</p>
+<p align="center">Version 2.1.0 · Windows x64 · 48-hour free trial · No recurring Rift Conduit subscription</p>
 
 Rift Conduit gives your Windows PC or server a focused interface for encrypted SFTP file access. Keep your files on your own storage, connect with a separate SFTP client, and turn access on or off when you choose.
 
@@ -57,7 +58,7 @@ The free trial lasts **48 elapsed hours from selecting Start Trial** in the app.
 
 A **$7.99 one-time purchase** provides a lifetime license for the activated computer, including lifetime technical support and lifetime upgrades. Enter the supplied ten-digit key in the app to activate. Internet access is required for activation; routine registered operation checks the saved license locally.
 
-**[Download the Windows installer](https://download.aicreatenow.com/software/rift-Conduit2.0.0microsoftSigned.exe)** · **[Purchase through Stripe](https://buy.stripe.com/6oU7sN0JB5l66c40Fw5kk0d)** · **[Trial and license details](https://riftconduit.com/docs/LICENSE-INFORMATION.txt)**
+**[Download the Windows installer](https://download.aicreatenow.com/software/rift-Conduit2.1.0microsoftSigned.exe)** · **[Purchase through Stripe](https://buy.stripe.com/6oU7sN0JB5l66c40Fw5kk0d)** · **[Trial and license details](https://riftconduit.com/docs/LICENSE-INFORMATION.txt)**
 
 Keep your license key for reactivation after uninstalling and reinstalling. Reinstalling does not restart the trial.
 
@@ -108,3 +109,4 @@ Please keep license keys, passwords and private connection details out of public
 **[AI Creations Now Software Development](https://aicreatenow.com/)** · **[RiftConduit.com](https://riftconduit.com/)**
 
 Copyright © 2026 AI Creations Now Software Development. All rights reserved. Third-party names belong to their respective owners.
+
