@@ -18,6 +18,8 @@
 
 <p align="center">Version 2.1.0 · Windows x64 · 48-hour free trial · No recurring Rift Conduit subscription</p>
 
+**Current Windows download: 2.1.0.** The GitHub Releases entry for 2.0 is a historical listing. Use the [official download page](https://riftconduit.com/download.html) for the current installer and requirements.
+
 Rift Conduit gives your Windows PC or server a focused interface for encrypted SFTP file access. Keep your files on your own storage, connect with a separate SFTP client, and turn access on or off when you choose.
 
 Built by **AI Creations Now Software Development**. This repository is the official product showcase and documentation hub. The application is proprietary; its source code is not included and this repository grants no open-source license for the application.
